@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>브라우저에서 직접적으로 변수를 전달할 때는 http://localhost:8080?num1=100&num2=2으로</p>
+    <p> ?뒤에 변수=값으로 전달한다. 변수와 변수의 구분 &를 사용</p>
+
+    <a href="/num1?num1=50">매핑과 변수를 전달</a>
+    <a href="/num2?num2=50">보내는 변수와 받는 변수가 다른 경우</a>
+
+    <p>타임리프는 주소지정은 @ 사용, $ 변수</p>
+    <a th:href="@{/num1(num1=80)}">타임리프로 매핑과 변수를 전달</a>
+
+    <form action="/num1">
+        <input type="number" name="num1">
+        <button type="submit">form으로 변수전달</button>
+    </form>
+</body>
+</html>

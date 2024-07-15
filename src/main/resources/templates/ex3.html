@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <p>서버로 부터 num1, num2의 변수를 받아서 처리</p>
+     <p>일반 태그에 출력(타임리프 text를 이용해서 변수의 값을 출력)</p>
+     <p>num1 : <span th:text="${num1}"></span></p>
+     <p>num2 : <span th:text="${num2}"></span></p>
+     <p>Form태그에 출력(타임리프 value를 이용해서 변수의 값을 출력)</p>
+<form action="#">
+    <input type="number" name="num1" th:value="${num1}">
+    <input type="number" name="num2" th:value="${num2}">
+</form>
+
+     <p>원하는 위치에 직접 변수를 출력( [ [ ] ]이용해서 출력)</p>
+     <p> num1 : [[${num1}]]</p>
+     <p> num2 : [[${num2}]]</p>
+</body>
+</html>
